@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+
+$font-family: "Manrope", sans-serif;
+
+$gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+$gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+
+$color-bg: #040c18;
+$color-footer: #031b34;
+$color-blog: #042c54;
+$color-text: #81afdd;
+$color-subtext: #ff8a71;
+$color-button-bg: #ff4820;
+$color-sidebar: rgba(255, 255, 255, 0.137);
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+body {
+  background-color: $color-bg;
+}
+
+// start styling navbar
+.navbar {
+  .navbar__wrapper {
+    padding: 10px 20px;
+    background-color: unset;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    .navbar__wrapper-logo {
+      a {
+        font-size: 40px;
+        font-weight: bolder;
+        color: white;
+        cursor: pointer;
+      }
+    }
+    .navbar__wrapper-links {
+      a {
+        color: #fff;
+        margin: 0 5px;
+        font-size: 12px;
+        padding: 5px 10px;
+
+        &:hover {
+          background-color: $color-button-bg;
+        }
+      }
+    }
+    .navbar__wrapper-links_mobile {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      margin-top: 157px;
+      justify-content: center;
+      align-items: flex-end;
+      right: 0;
+      background-color: rgb(108 104 104 / 14%);
+      z-index: 99;
+      height: 100vh;
+      width: 100px;
+
+      .navbar__links-mobile {
+        width: 100%;
+        a {
+          display: flex;
+          justify-content: flex-start;
+          padding: 10px 0;
+          color: #fff;
+          width: 100%;
+
+          &:hover {
+            background-color: $color-button-bg;
+          }
+        }
+      }
+    }
+    .navbar__wrapper-loggin_buttons {
+      a {
+        color: #fff;
+        font-size: 12px;
+      }
+      button {
+        background-color: $color-button-bg;
+        font-size: 12px;
+        padding: 5px 10px;
+        margin: 5px 20px;
+        color: white;
+      }
+    }
+
+    img {
+      width: 25px;
+      height: 25px;
+      background-color: $color-sidebar;
+      padding: 2px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .closeIcon {
+      background-color: unset !important;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 85px;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .navbar__wrapper-loggin_buttons {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navbar__wrapper-links {
+    display: none;
+  }
+}
+// End of  styling navbar
