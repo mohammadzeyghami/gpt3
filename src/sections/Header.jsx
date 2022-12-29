@@ -5,7 +5,7 @@ import people from "../assets/people (1).png";
 const Header = () => {
   return (
     <div className="header">
-      <div className="header__description">
+      <div className="header__content">
         <h1>Let’s Build Something amazing with GPT-3 OpenAI</h1>
         <p>
           Yet bed any for travelling assistance indulgence unpleasing. Not
@@ -14,7 +14,7 @@ const Header = () => {
           asked of.
         </p>
         <div className="header__description-search">
-          <input type="text" />
+          <input type="text" placeholder="Your Email Address" />
           <button>Get Started</button>
         </div>
         <div className="header__description-img">

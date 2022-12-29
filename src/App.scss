@@ -13,8 +13,10 @@ $color-subtext: #ff8a71;
 $color-button-bg: #ff4820;
 $color-input-bg: #052d56;
 $color-sidebar: rgba(255, 255, 255, 0.137);
+$color-placeHolder: #3d6184;
 * {
   box-sizing: border-box;
+  font-family: $gradient-text;
   text-decoration: none;
   padding: 0;
   margin: 0;
@@ -22,6 +24,7 @@ $color-sidebar: rgba(255, 255, 255, 0.137);
 }
 body {
   background-color: $color-bg;
+  font-style: normal;
 }
 
 // start styling navbar
@@ -134,154 +137,421 @@ body {
 // End of  styling navbar
 
 // start styling Header
-
 .header {
+  padding: 10px 40px;
+  margin: 0 auto 0 auto;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   width: 100%;
-  .header__description {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-top: 150px;
-    flex-direction: column;
+  max-width: 1400px;
+
+  .header__content {
     flex: 1;
-    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
     h1 {
-      top: 0;
-      width: 614px;
+      width: 100%;
       height: 225px;
 
-      font-family: "Manrope";
-      font-style: normal;
       font-weight: 800;
       font-size: 62px;
+      margin-bottom: 2rem;
       line-height: 75px;
-      /* or 121% */
-
       letter-spacing: -0.04em;
-
-      background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+      background: $gradient-text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
     p {
-      width: 614px;
-      margin-top: 50px;
-      font-family: "Manrope";
-      font-style: normal;
+      width: 100%;
+      height: 180px;
       font-weight: 400;
       font-size: 20px;
       line-height: 27px;
-
-      color: #81afdd;
+      color: $color-text;
     }
     .header__description-search {
       display: flex;
-      margin-top: 50px;
+      justify-content: center;
+      width: 100%;
       input {
-        border: none;
-        outline: none;
-        width: 456px;
-        height: 73px;
-        font-size: 27px;
-        padding: 0 15px;
-        color: white;
-        background: $color-input-bg;
-        border-radius: 5px 0px 0px 5px;
-      }
-      button {
-        width: 174px;
-        height: 73px;
-
-        font-family: "Manrope";
-        font-style: normal;
-        font-weight: 700;
+        flex: 2;
+        width: 100%;
+        min-height: 50px;
+        font-weight: 400;
         font-size: 20px;
         line-height: 27px;
-
-        color: #ffffff;
-
-        background: #ff4820;
-        border-radius: 5px 0px 0px 5px;
+        color: #fff;
+        background: $color-input-bg;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        outline: none;
+        padding: 0 10px;
+        &::placeholder {
+          color: $color-placeHolder;
+        }
+      }
+      button {
+        flex: 0.58;
+        border: none;
+        outline: none;
+        border-radius: 0 5px 5px 0;
+        width: 100%;
+        min-height: 50px;
+        cursor: pointer;
+        background: $color-button-bg;
       }
     }
     .header__description-img {
+      width: 100%;
+      margin-top: 50px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: 160px;
-      img {
-        padding-top: 50px;
-        padding-right: 10px;
-      }
+
       p {
-        color: #fff;
-        font-family: "Manrope";
-        font-style: normal;
+        width: 100%;
+        height: 37.61px;
         font-weight: 500;
-        font-size: 16px;
+        font-size: 12px;
         line-height: 38px;
+        color: #ffffff;
+        margin-left: 15px;
+      }
+      img {
+        width: 181.79px;
+        height: 38px;
       }
     }
   }
   .header__img {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-      height: 95vh;
-      max-width: 100%;
-      margin-bottom: 200px;
-    }
-  }
-  @media screen and (max-width: 1750px) {
-    .header__description {
-      width: 700px;
-    }
-  }
-  @media screen and (max-width: 1500px) {
-    .header__description {
-      position: relative;
-      z-index: 2;
-    }
-    .header__img {
-      position: absolute;
-      opacity: 0.4;
+      width: 100%;
+      height: 100%;
     }
   }
 }
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 1050px) {
   .header {
-    margin-top: 100px;
-    margin-left: 50px;
+    flex-direction: column;
+  }
+  .header__content {
+    margin: 0 0 3rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .header {
-    margin-top: 100px;
-    margin-left: 100px;
-    .header__img {
-      display: none;
+    .header__content {
+      h1 {
+        font-size: 48px;
+        line-height: 60px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 }
 @media screen and (max-width: 550px) {
   .header {
-    margin-top: 160px;
-    margin-left: 130px;
+    .header__content {
+      h1 {
+        font-size: 48px;
+        line-height: 60px;
+        height: 100%;
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .header__description-search {
+        input {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        button {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+      .header__description-img {
+        flex-direction: column;
+        p {
+          margin: 0;
+        }
+      }
+    }
   }
 }
-@media screen and (max-width: 450px) {
-  .header {
-    margin-top: 230px;
-    margin-left: 130px;
+// end of header section
+
+// Brand section
+.brand {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  margin: 150px auto 150px auto;
+  max-width: 1400px;
+}
+.brand__wrapper {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand__wrapper-icons {
+  img {
+    margin: 10px 25px;
+
+    flex-grow: 0;
   }
 }
-@media screen and (max-width: 375px) {
-  .header {
-    margin-top: 260px;
-    margin-left: 160px;
+//end of Brand section
+
+// start what is Gpt-3 section
+.whatGpt-3 {
+  flex: 1;
+  padding: 10px 135px;
+  margin: 0 auto 0 auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  background-color: #1a2d66;
+  .whatGpt-3_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+
+    .whatGpt-3-title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      .whatGpt-3-title__line {
+        width: 38px;
+        height: 3px;
+        background: $gradient-text;
+      }
+      span {
+        width: 100%;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 75px;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+        padding-bottom: 60px;
+      }
+    }
+    p {
+      max-width: 730px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #81afdd;
+    }
+  }
+  .whatGpt-3_mid {
+    display: flex;
+    margin: 50px 0;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      max-width: 472px;
+      max-height: 90px;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 45px;
+      background: $gradient-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p {
+      max-width: 143px;
+      max-height: 30px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      /* identical to box height, or 188% */
+
+      color: $color-subtext;
+    }
+  }
+
+  .whatGpt-3_bottom {
+    margin: 50px 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    .Gpt3Card {
+      margin: 10px 25px;
+      .Gpt3Card__upperline {
+        width: 100%;
+        max-width: 38px;
+        height: 3px;
+        background: $gradient-text;
+      }
+      .Gpt3Card__title {
+        max-width: 105px;
+        max-height: 75px;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 75px;
+        letter-spacing: -0.04em;
+        color: #ffffff;
+      }
+      .Gpt3Card__description {
+        max-width: 334px;
+        max-height: 92px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        /* or 188% */
+
+        color: $color-text;
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    .whatGpt-3_top {
+      flex-direction: column;
+      margin: 25px;
+    }
+
+    .whatGpt-3_bottom {
+      flex-direction: column;
+    }
+    .Gpt3Card {
+      padding: 35px 0;
+    }
   }
 }
+@media screen and (max-width: 950px) {
+  .whatGpt-3 {
+    padding: 10px 30px;
+    .whatGpt-3_mid {
+      flex-direction: column;
+      margin: 25px 0;
+      p {
+        padding-top: 40px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .Gpt3Card {
+    padding: 50px 0;
+  }
+}
+
+// end of what is Gpt-3 section
+
+// start styling of features
+.features {
+  flex: 1;
+  margin: 0 auto 0 auto;
+  padding: 100px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1700px;
+  width: 100%;
+  height: 100%;
+
+  .features__wrapper-left {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+
+    h2 {
+      max-width: 426px;
+      max-height: 180px;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 45px;
+      background: $gradient-text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p {
+      max-width: 271px;
+      max-height: 30px;
+      font-weight: 500;
+      padding-top: 35px;
+      font-size: 16px;
+      line-height: 30px;
+      color: #ff8a71;
+    }
+  }
+  .features__wrapper-right {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: flex-start;
+  }
+  .features__wrapper-right__items {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0;
+  }
+  .Gpt3Card {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+  }
+  .Gpt3Card__title {
+    max-width: 182px;
+    max-height: 48px;
+    font-weight: 550;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: -0.04em;
+    color: #ffffff;
+  }
+  .Gpt3Card__upperline {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+    max-width: 38px;
+    max-height: 3px;
+    background: $gradient-text;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .Gpt3Card__description {
+    max-width: 334px;
+    max-height: 92px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $color-text;
+  }
+}
+// end of  styling of features
