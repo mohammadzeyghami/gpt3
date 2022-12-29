@@ -11,6 +11,7 @@ $color-blog: #042c54;
 $color-text: #81afdd;
 $color-subtext: #ff8a71;
 $color-button-bg: #ff4820;
+$color-input-bg: #052d56;
 $color-sidebar: rgba(255, 255, 255, 0.137);
 * {
   box-sizing: border-box;
@@ -46,7 +47,7 @@ body {
       a {
         color: #fff;
         margin: 0 5px;
-        font-size: 12px;
+        font-size: 18px;
         padding: 5px 10px;
 
         &:hover {
@@ -85,11 +86,11 @@ body {
     .navbar__wrapper-loggin_buttons {
       a {
         color: #fff;
-        font-size: 12px;
+        font-size: 18px;
       }
       button {
         background-color: $color-button-bg;
-        font-size: 12px;
+        font-size: 18px;
         padding: 5px 10px;
         margin: 5px 20px;
         color: white;
@@ -103,6 +104,7 @@ body {
       padding: 2px;
       border-radius: 10px;
       cursor: pointer;
+      display: none;
     }
     .closeIcon {
       background-color: unset !important;
@@ -113,15 +115,173 @@ body {
     }
   }
 }
+@media screen and (max-width: 850px) {
+  .navbar__wrapper-links {
+    display: none;
+  }
+  .navbar__wrapper {
+    img {
+      display: block;
+    }
+  }
+}
 @media screen and (max-width: 375px) {
   .navbar__wrapper-loggin_buttons {
     display: none;
   }
 }
 
-@media screen and (max-width: 750px) {
-  .navbar__wrapper-links {
-    display: none;
+// End of  styling navbar
+
+// start styling Header
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  .header__description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 150px;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    h1 {
+      top: 0;
+      width: 614px;
+      height: 225px;
+
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 62px;
+      line-height: 75px;
+      /* or 121% */
+
+      letter-spacing: -0.04em;
+
+      background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    p {
+      width: 614px;
+      margin-top: 50px;
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+
+      color: #81afdd;
+    }
+    .header__description-search {
+      display: flex;
+      margin-top: 50px;
+      input {
+        border: none;
+        outline: none;
+        width: 456px;
+        height: 73px;
+        font-size: 27px;
+        padding: 0 15px;
+        color: white;
+        background: $color-input-bg;
+        border-radius: 5px 0px 0px 5px;
+      }
+      button {
+        width: 174px;
+        height: 73px;
+
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;
+
+        color: #ffffff;
+
+        background: #ff4820;
+        border-radius: 5px 0px 0px 5px;
+      }
+    }
+    .header__description-img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 160px;
+      img {
+        padding-top: 50px;
+        padding-right: 10px;
+      }
+      p {
+        color: #fff;
+        font-family: "Manrope";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 38px;
+      }
+    }
+  }
+  .header__img {
+    flex: 1;
+    img {
+      height: 95vh;
+      max-width: 100%;
+      margin-bottom: 200px;
+    }
+  }
+  @media screen and (max-width: 1750px) {
+    .header__description {
+      width: 700px;
+    }
+  }
+  @media screen and (max-width: 1500px) {
+    .header__description {
+      position: relative;
+      z-index: 2;
+    }
+    .header__img {
+      position: absolute;
+      opacity: 0.4;
+    }
   }
 }
-// End of  styling navbar
+@media screen and (max-width: 850px) {
+  .header {
+    margin-top: 100px;
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .header {
+    margin-top: 100px;
+    margin-left: 100px;
+    .header__img {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .header {
+    margin-top: 160px;
+    margin-left: 130px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .header {
+    margin-top: 230px;
+    margin-left: 130px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .header {
+    margin-top: 260px;
+    margin-left: 160px;
+  }
+}
