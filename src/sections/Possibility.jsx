@@ -1,9 +1,12 @@
 import React from "react";
+import { possibility } from "../assets";
 
 const Possibility = () => {
   return (
     <div className="possibility">
-      <div className="Possibility__left"></div>
+      <div className="Possibility__left">
+        <img src={possibility} alt="" />
+      </div>
       <div className="Possibility__right">
         <span className="Possibility__right-top">
           Request Early Access to Get Started

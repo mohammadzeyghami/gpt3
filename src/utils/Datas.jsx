@@ -1,3 +1,4 @@
+import { blog01, blog02, blog03, blog04, blog05 } from "../assets";
 const FeatureDatas = [
   {
     title: "Improving end distrusts instantly ",
@@ -21,4 +22,28 @@ const FeatureDatas = [
   },
 ];
 
+const BlogText = "GPT-3 and Open  AI is the future. Let us exlore how it is?";
+const BlogDate = "Sep 26, 2021";
+export const BlogDatas = [
+  {
+    img: blog02,
+    text: BlogText,
+    date: BlogDate,
+  },
+  {
+    img: blog03,
+    text: BlogText,
+    date: BlogDate,
+  },
+  {
+    img: blog04,
+    text: BlogText,
+    date: BlogDate,
+  },
+  {
+    img: blog05,
+    text: BlogText,
+    date: BlogDate,
+  },
+];
 export default FeatureDatas;

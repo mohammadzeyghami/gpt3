@@ -1,6 +1,6 @@
 import React from "react";
 import { Gpt3Card } from "../components";
-import FeatureDatas from "../utils/FeatureDatas";
+import FeatureDatas from "../utils/Datas";
 const Features = () => {
   return (
     <div className="features">
