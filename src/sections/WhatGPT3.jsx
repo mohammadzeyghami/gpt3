@@ -2,7 +2,7 @@ import React from "react";
 import { Gpt3Card } from "../components/";
 const WhatGPT3 = () => {
   return (
-    <div className="whatGpt-3">
+    <div className="whatGpt-3" id="whatGpt-3">
       <div className="whatGpt-3_top">
         <div className="whatGpt-3-title">
           <div className="whatGpt-3-title__line"></div>

@@ -3,7 +3,7 @@ import { Gpt3Card } from "../components";
 import FeatureDatas from "../utils/Datas";
 const Features = () => {
   return (
-    <div className="features">
+    <div className="features" id="features">
       <div className="features__wrapper-left">
         <h2>
           The Future is Now and You Just Need To Realize It. Step into Future

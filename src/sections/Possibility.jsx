@@ -3,7 +3,7 @@ import { possibility } from "../assets";
 
 const Possibility = () => {
   return (
-    <div className="possibility">
+    <div className="possibility" id="possibility">
       <div className="Possibility__left">
         <img src={possibility} alt="" />
       </div>

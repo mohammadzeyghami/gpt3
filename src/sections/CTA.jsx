@@ -2,7 +2,7 @@ import React from "react";
 
 const CTA = () => {
   return (
-    <div className="cta">
+    <div className="cta" id="cta">
       <div className="cta__left">
         <p className="cta__left-title">Request Early Access to Get Started</p>
         <span className="cta__left-description">

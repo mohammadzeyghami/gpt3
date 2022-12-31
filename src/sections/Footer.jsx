@@ -2,7 +2,7 @@ import React from "react";
 import { FooterLinks } from "../components";
 const Footrer = () => {
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
       <div className="footer__title">
         <h2>Do you want to step in to the future before others</h2>
       </div>
